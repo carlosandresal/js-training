@@ -1,4 +1,8 @@
 {
   "presets": ["es2015", "stage-2"],
   "plugins": ["transform-runtime"]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 52eef3c1b6c90d55062fa0d188000982d0e3dc5b

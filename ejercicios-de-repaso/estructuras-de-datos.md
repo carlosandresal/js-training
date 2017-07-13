@@ -2,7 +2,10 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
+<<<<<<< HEAD
 - [Strings](#strings)
+=======
+>>>>>>> 52eef3c1b6c90d55062fa0d188000982d0e3dc5b
   - [Ejercicio 1](#ejercicio-1)
   - [Ejercicio 2](#ejercicio-2)
 - [Arrays](#arrays)
@@ -14,7 +17,11 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+<<<<<<< HEAD
 # Strings
+=======
+#Strings
+>>>>>>> 52eef3c1b6c90d55062fa0d188000982d0e3dc5b
 ## Ejercicio 1 
 Escribir una función que reciba dos parámetros del tipo string. La función deberá retornar la cantidad de apariciones que tiene el segundo parámetro en el primer parámetro. Ejemplo:
 

@@ -12,11 +12,16 @@
       </li>
     </ul>
     <p class="links">
+<<<<<<< HEAD
       <!-- change the href prop to redirect to the route you added on main.js for user's submissions -->
       <a :href="">submissions</a><br>
 
       <!-- change the href prop to redirect to the route you added on main.js for user's comments -->
       <a :href="">comments</a>
+=======
+      <a :href="`#/user-submissions/${user.id}`">submissions</a><br>
+      <a :href="`#/user-comments/${user.id}`">comments</a>
+>>>>>>> 52eef3c1b6c90d55062fa0d188000982d0e3dc5b
     </p>
   </div>
 </template>

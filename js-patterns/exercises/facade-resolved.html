@@ -7,28 +7,8 @@
     <link rel="stylesheet" href="facade.css">
     <script type="text/javascript" src="facade-pre.js"></script>
     <script type="text/javascript">
+
       function sendRequest(path, options, cb) {
-        // write a function that receives a path, an options object and a callback function
-        // the function will have to use internally the fetch API to make a http request
-        // and use its promise interface to call the "cb" argument when it corresponds
-
-        // the function should check if the "dataType" property of the "options" argument
-        // is 'text', 'json' or 'undefined'
-        // if the "dataType" property is "text", then the "sendRequest" function
-        // will have to use fetch to obtain a Response object, then use its ".text()"
-        // method (a Promise API too) to call the callback with the result ("cb(null, result)")
-        // if the "dataType" property is "json", the "sendRequest" function will have to 
-        // implement similar logic to the "text" case but with the ".json()" method of the Response
-        // object
-        // if the "dataType" property is undefined, then the "sendRequest" function will
-        // have to call the callback argument directly with the Response object
-        // as result ("cb(null, response)")
-
-        // fetch API basic example: https://davidwalsh.name/fetch
-        if(typeof path !== 'string') {
-          throw new Error('Path must be a string.');
-        }
-
         if(typeof cb !== 'function') {
           throw new Error('The callback parameter must be a function');
         }

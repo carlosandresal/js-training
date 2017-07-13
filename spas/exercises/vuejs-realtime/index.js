@@ -30,6 +30,7 @@ function broadcastUserConnectionsToEveryone() {
 
 io.on('connection', (socket) => {
   console.log('A user has connected.');
+<<<<<<< HEAD
   // add socket to the "users" list
 
   // broadcast user connection
@@ -39,5 +40,14 @@ io.on('connection', (socket) => {
     // remote socket from "users" list
 
     // broadcast user connection
+=======
+  users.push(socket);
+  broadcastUserConnectionsToEveryone();
+
+  socket.on('disconnect', () => {
+    console.log('A user disconnected.')
+    users.splice(users.indexOf(socket), 1);
+    broadcastUserConnectionsToEveryone();
+>>>>>>> 52eef3c1b6c90d55062fa0d188000982d0e3dc5b
   });
 });

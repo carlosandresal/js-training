@@ -1,6 +1,25 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+<<<<<<< HEAD
+=======
+
+- [Promises](#promises)
+  - [States](#states)
+  - [Chaining](#chaining)
+  - [Error handling](#error-handling)
+  - [Promise.resolve](#promiseresolve)
+  - [Promise.reject](#promisereject)
+  - [Promise.all](#promiseall)
+  - [Promise.race](#promiserace)
+  - [Resources](#resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+# Promises
+##Definition:
+A promise represents the eventual result of an asynchronous operation. It is a placeholder into which the successful result value or reason for failure will materialize.
+>>>>>>> 52eef3c1b6c90d55062fa0d188000982d0e3dc5b
 
 - [Promises](#promises)
   - [Definition](#definition)

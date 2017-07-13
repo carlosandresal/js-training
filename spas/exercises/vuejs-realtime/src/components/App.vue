@@ -7,9 +7,16 @@
       </a>
       <h1><a href="#/">Hacker News</a>    </h1>
       <font color="#ffffff">{{title}}</font>
+<<<<<<< HEAD
     </div>
 
     <!-- add html to display the usersConnections property -->
+=======
+      <span class="source">
+        Total users connected: {{ usersConnections }}
+      </span>
+    </div>
+>>>>>>> 52eef3c1b6c90d55062fa0d188000982d0e3dc5b
     <!-- main view -->
     <router-view
       class="view"
@@ -37,8 +44,14 @@ export default {
   },
   created () {
     store.on('titleChange', this.updateTitle);
+<<<<<<< HEAD
 
     // subscribe to the "usersConnection" event and update the usersConnections property
+=======
+    store.io.on('usersConnections', (data) => {
+      this.usersConnections = data.count;
+    });
+>>>>>>> 52eef3c1b6c90d55062fa0d188000982d0e3dc5b
   }, 
   destroyed () {
     store.removeListener('titleChange', this.updateTitle)

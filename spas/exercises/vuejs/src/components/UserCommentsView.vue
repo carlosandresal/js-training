@@ -5,6 +5,15 @@
     You will have to filter to leave only the ones that have type 'comments'.
     To view the full docs on how the data is formatted you can see https://github.com/HackerNews/API#items
    -->
+<<<<<<< HEAD
+=======
+  <ul class="comments" :class="{ loading: !comments.length }">
+    <comment
+      v-for="comment in comments"
+      :comment="comment">
+    </comment>
+  </ul>
+>>>>>>> 52eef3c1b6c90d55062fa0d188000982d0e3dc5b
 </template>
 
 <script>
@@ -22,6 +31,11 @@ export default {
   data () {
     return {
       // here initialize the fields your view will need
+<<<<<<< HEAD
+=======
+      user: {},
+      comments: []
+>>>>>>> 52eef3c1b6c90d55062fa0d188000982d0e3dc5b
     }
   },
 
@@ -38,6 +52,7 @@ export default {
       // Promise sugar syntax: return an object that contains Promise fields.
       // http://router.vuejs.org/en/pipeline/data.html#promise-sugar
       document.title = `User's comments: ${to.params.id} | Vue.js HN Clone`;
+<<<<<<< HEAD
 
 
       // user the 'store.emit' API to change the title emitting the 'titleChange' event
@@ -45,6 +60,25 @@ export default {
 
       // use the mentioned 'store.fetchUser' and 'store.fetchItems' to return an object
       // with the same fields you defined above
+=======
+      let userData;
+
+      // user the 'store.emit' API to change the title emitting the 'titleChange' event
+      // the title should be in the format: "username's comments"
+      store.emit('titleChange', `${to.params.id}'s comments`);
+
+      // use the mentioned 'store.fetchUser' and 'store.fetchItems' to return an object
+      // with the same fields you defined above
+      return store.fetchUser(to.params.id).then((user) => {
+        userData = user;
+        return store.fetchItems(user.submitted);
+      }).then((items) => {
+        return {
+          user: userData,
+          comments: items.filter((item) => item.type === 'comment')
+        }
+      });
+>>>>>>> 52eef3c1b6c90d55062fa0d188000982d0e3dc5b
     },
 
     activate () {
@@ -53,6 +87,10 @@ export default {
 
     deactivate () {
       console.log('Router lifecycle: UserCommentsView deactivated.')
+<<<<<<< HEAD
+=======
+      store.emit('titleChange', '');
+>>>>>>> 52eef3c1b6c90d55062fa0d188000982d0e3dc5b
     }
   },
   filters: {
